@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { useState } from "react";
 import BlogSection from "./components/BlogSection";
 import DeliveryAreas from "./components/DeliveryAreas";
+import DietCalculatorPage from "./components/DietCalculatorPage";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
@@ -17,7 +18,7 @@ import SolutionSection from "./components/SolutionSection";
 import Testimonials from "./components/Testimonials";
 import TrustBar from "./components/TrustBar";
 
-export type Page = "home" | "recipes";
+export type Page = "home" | "recipes" | "calculator";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>("home");
@@ -41,9 +42,14 @@ export default function App() {
           <FinalCTA />
           <Footer />
         </main>
-      ) : (
+      ) : currentPage === "recipes" ? (
         <main>
           <RecipesPage />
+          <Footer />
+        </main>
+      ) : (
+        <main>
+          <DietCalculatorPage />
           <Footer />
         </main>
       )}

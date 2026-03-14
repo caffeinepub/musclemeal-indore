@@ -101,6 +101,39 @@ const ARTICLES = [
       },
     ],
   },
+  {
+    id: 4,
+    title:
+      "What Happens to Your Body When You Skip the Gym, Exercise, and Proper Diet",
+    excerpt:
+      "Most people don't realize what's happening inside their body when they consistently skip workouts and eat poorly. The effects are faster and more serious than you think.",
+    tag: "Fitness & Health",
+    readTime: "5 min read",
+    imgUrl:
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=350&fit=crop",
+    content: [
+      {
+        heading: "Without Exercise: What Happens to Your Body?",
+        body: "Within just 2 weeks of stopping exercise, your cardiovascular fitness drops by 10–15%. After 3–4 weeks, muscle mass begins to shrink (called muscle atrophy). After 3 months, your metabolism slows down significantly, making fat gain much easier. Studies show sedentary people have a 35% higher risk of early death compared to active individuals.",
+      },
+      {
+        heading: "Without Proper Diet: The Hidden Damage",
+        body: "Eating outside food daily means consuming 40–60% more calories, sodium, and unhealthy fats than your body needs. This leads to: fatty liver disease (affects 38% of Indians), insulin resistance (a precursor to Type 2 diabetes), chronic inflammation which damages joints and organs, and hormonal imbalance that kills energy, mood, and recovery.",
+      },
+      {
+        heading: "The Combination: No Exercise + Poor Diet",
+        body: "This combination is the leading cause of lifestyle diseases in India. Research shows: 70% of urban Indians are physically inactive. People with poor diet AND no exercise gain 4–6 kg of fat per year on average. Heart disease risk increases by 52%. You age 5–7 years faster biologically.",
+      },
+      {
+        heading: "With Proper Exercise + Right Diet: The Transformation",
+        body: "The flip side is powerful: 12 weeks of consistent training + proper nutrition can reduce body fat by 8–12%. Energy levels increase by 40%, mental clarity improves, sleep quality goes up by 65%. Blood pressure normalizes, cholesterol improves, and your risk of chronic disease drops by 50%. You don't just look better — you function better in every area of life.",
+      },
+      {
+        heading: "How MuscleMeal Bridges the Gap",
+        body: "The biggest barrier to eating right is time and knowledge. Most people know they should eat healthy — but they don't know how to calculate macros or cook daily. MuscleMeal removes that barrier entirely. Freshly prepared, macro-balanced meals delivered to your door — so your diet works as hard as your workout.",
+      },
+    ],
+  },
 ];
 
 type Article = (typeof ARTICLES)[number];
@@ -195,7 +228,7 @@ export default function BlogSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {ARTICLES.map((article, i) => (
             <motion.article
               key={article.id}

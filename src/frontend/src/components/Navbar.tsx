@@ -41,6 +41,12 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const goCalculator = () => {
+    setCurrentPage("calculator");
+    setMobileOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -53,10 +59,17 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
         <button
           type="button"
           onClick={goHome}
-          className="font-display text-xl font-bold text-gray-900 hover:text-primary transition-colors"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           data-ocid="nav.home.link"
         >
-          Muscle Meals Indore
+          <img
+            src="/assets/uploads/076f7670-1bb2-11f1-b556-0d2041fa1b6f-1.png"
+            alt="Muscle Meals Indore"
+            className="h-10 w-auto object-contain"
+          />
+          <span className="font-display text-lg font-bold text-gray-900 hidden sm:inline">
+            Muscle Meals Indore
+          </span>
         </button>
 
         <ul className="hidden md:flex items-center gap-7">
@@ -96,6 +109,20 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               }`}
             >
               Recipes
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              onClick={goCalculator}
+              data-ocid="nav.calculator.link"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                currentPage === "calculator"
+                  ? "text-primary font-semibold"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Diet Calculator
             </button>
           </li>
         </ul>
@@ -167,6 +194,20 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                   }`}
                 >
                   Recipes
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={goCalculator}
+                  data-ocid="nav.calculator.link"
+                  className={`text-sm font-medium transition-colors ${
+                    currentPage === "calculator"
+                      ? "text-primary font-semibold"
+                      : "text-gray-800 hover:text-primary"
+                  }`}
+                >
+                  Diet Calculator
                 </button>
               </li>
             </ul>
