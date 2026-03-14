@@ -6,6 +6,7 @@ import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Footer from "./components/Footer";
+import HealthStats from "./components/HealthStats";
 import HeroSection from "./components/HeroSection";
 import HowItWorks from "./components/HowItWorks";
 import Navbar from "./components/Navbar";
@@ -28,6 +29,7 @@ export default function App() {
         <main>
           <HeroSection />
           <TrustBar />
+          <HealthStats />
           <ProblemSection />
           <SolutionSection />
           <PricingSection />

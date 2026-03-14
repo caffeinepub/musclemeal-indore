@@ -56,7 +56,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
           className="font-display text-xl font-bold text-gray-900 hover:text-primary transition-colors"
           data-ocid="nav.home.link"
         >
-          MuscleMeal
+          Muscle Meals Indore
         </button>
 
         <ul className="hidden md:flex items-center gap-7">
@@ -101,7 +101,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
         </ul>
 
         <a
-          href="https://wa.me/917724047283?text=Hi%20MuscleMeal%2C%20I%20want%20a%20Free%20Trial!"
+          href="https://wa.me/917724047283?text=Hi%20Muscle%20Meals%20Indore%2C%20I%20want%20a%20Free%20Trial!"
           target="_blank"
           rel="noopener noreferrer"
           data-ocid="nav.order.button"
@@ -171,13 +171,13 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               </li>
             </ul>
             <a
-              href="https://wa.me/917724047283?text=Hi%20MuscleMeal%2C%20I%20want%20a%20Free%20Trial!"
+              href="https://wa.me/917724047283?text=Hi%20Muscle%20Meals%20Indore%2C%20I%20want%20a%20Free%20Trial!"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center gap-2 bg-primary text-white px-4 py-2.5 rounded-full text-sm font-semibold"
             >
               <WhatsAppIcon className="w-4 h-4 fill-current" />
-              Free Trial Shuru Karo
+              Start Free Trial
             </a>
           </motion.div>
         )}
