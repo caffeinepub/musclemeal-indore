@@ -6,83 +6,87 @@ const ARTICLES = [
   {
     id: 1,
     title:
-      "The Biggest Diet Mistake Gym-Goers in Indore Make — And How to Fix It",
+      "How Much Protein Do You Really Need to Build Muscle? The Complete Guide for Gym-Goers",
     excerpt:
-      "90% of people hitting the gym in Indore make the same critical mistake — eating random food after a workout. Here's why it's blocking your results and the perfect fix.",
-    tag: "Diet Tips",
-    readTime: "4 min read",
+      "Most gym-goers are eating half the protein they actually need. Here's the exact science on protein requirements for muscle hypertrophy and how MuscleMeal hits your target every day.",
+    tag: "Muscle Building",
+    readTime: "5 min read",
     imgUrl:
-      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=350&fit=crop",
     content: [
       {
-        heading: "What's the problem?",
-        body: "Most people who go to the gym focus only on their workout. But real results — fat loss or muscle gain — come 70% from diet and only 30% from training. That's the biggest mistake people make.",
+        heading: "The Protein Requirement for Muscle Gain",
+        body: "Research is clear: to build muscle you need 1.6–2.2g of protein per kg of body weight per day. A 75kg man needs 120–165g protein daily. Most people eating regular home food get only 40–60g. That deficit stops all muscle growth.",
       },
       {
-        heading: "Mistake #1: Skipping the Post-Workout Meal",
-        body: "After a workout, there's a 30–45 minute 'anabolic window' where your muscles are primed to absorb protein for repair and growth. If you skip this window or eat something random, you've wasted your entire workout.",
+        heading: "Protein Timing: The Anabolic Window",
+        body: "After resistance training, there's a 30–45 minute window where muscle protein synthesis is elevated 2x above baseline. Consuming 30–40g fast-digesting protein in this window significantly increases muscle hypertrophy compared to delayed intake.",
       },
       {
-        heading: "Mistake #2: Ignoring Your Protein Count",
-        body: "An average gym-goer needs 1.6–2.2g of protein per kg of body weight per day. A 70kg person needs 112–154g of protein daily. Standard home food typically provides only 40–50g — far short.",
+        heading: "Leucine: The Muscle-Building Trigger",
+        body: "Leucine is the key amino acid that activates mTOR — the master switch for muscle protein synthesis. You need at least 3g of leucine per meal to trigger a full anabolic response. Chicken, eggs, paneer, and whey are all excellent sources.",
       },
       {
-        heading: "The Solution: MuscleMeal",
-        body: "Every MuscleMeal is pre-calculated, freshly prepared, and goal-specific. Whether you're aiming for fat loss or muscle gain — each portion delivers exactly what your body needs.",
+        heading: "How MuscleMeal Solves This",
+        body: "Every MuscleMeal contains 30–45g of protein per serving, timed for optimal absorption. You don't count anything. Just eat and train. We handle the nutrition science so you can focus on the gym.",
       },
     ],
   },
   {
     id: 2,
     title:
-      "How Much Protein Do You Need for Fat Loss? Meeting Your Daily Target on an Indian Diet",
+      "Bulking vs Cutting: The Right Nutrition Strategy for Each Phase of Bodybuilding",
     excerpt:
-      "Fat loss without protein is impossible. Learn how much protein Indian meals actually contain and how to hit your daily target without expensive supplements.",
-    tag: "Nutrition",
-    readTime: "5 min read",
+      "Whether you're in a bulk or a cut, your meal plan needs to be different. Here's exactly what to eat in each phase to maximize muscle and minimize fat.",
+    tag: "Bodybuilding",
+    readTime: "6 min read",
     imgUrl:
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=350&fit=crop",
     content: [
       {
-        heading: "Why Is Protein Essential for Fat Loss?",
-        body: "When you cut calories, your body loses both fat and muscle. High protein intake protects your muscle mass so that only fat is lost. Protein is also thermogenic — your body burns more calories just digesting it.",
+        heading: "The Bulking Phase: Caloric Surplus for Muscle",
+        body: "During a bulk, you eat 300–500 calories above your TDEE. Protein stays high at 2g/kg. Carbohydrates fuel workouts and spike insulin to drive amino acids into muscle cells. MuscleMeal's Bulking Plan is designed with exactly this caloric architecture.",
       },
       {
-        heading: "How Much Protein Do You Need?",
-        body: "For fat loss: Body weight (kg) × 1.8–2.2g protein per day. Example: A 65kg woman needs 117–143g of protein daily. A 75kg man needs 135–165g of protein daily.",
+        heading: "The Cutting Phase: Preserve Muscle, Burn Fat",
+        body: "A cut requires a 300–500 calorie deficit while keeping protein at 2.2–2.5g/kg — higher than in a bulk — to prevent muscle catabolism. Dropping protein during a cut is the #1 mistake that causes muscle loss instead of fat loss.",
       },
       {
-        heading: "Protein in Common Indian Foods",
-        body: "Chicken breast: 31g | Eggs (2 pcs): 12g | Paneer: 18g | Soya chunks: 52g | Greek yogurt: 10g | Cooked dal: 9g. Hitting your protein target on dal-roti alone is nearly impossible.",
+        heading: "Body Recomposition: Lose Fat and Gain Muscle Simultaneously",
+        body: "Possible for beginners and returning athletes: eat at maintenance calories with very high protein (2.2–2.5g/kg), train heavy with progressive overload. Research shows up to 1kg fat loss + 0.5kg muscle gain per month is achievable.",
       },
       {
-        heading: "Why MuscleMeal Makes This Easy",
-        body: "Every MuscleMeal fat loss box has precisely calculated protein — you don't need to count a thing. Macros are printed on each box. Just eat and trust the process.",
+        heading: "MuscleMeal Plans Are Phase-Specific",
+        body: "Our Bulking Plan, Cutting Plan, and Body Recomp Plan are each engineered with different calorie targets and macro splits. You choose your phase, we deliver the right meals every morning. No spreadsheets. No guesswork.",
       },
     ],
   },
   {
     id: 3,
     title:
-      "What Happens to Your Body When You Skip the Gym, Exercise, and Proper Diet",
+      "Pre-Workout & Post-Workout Nutrition: What to Eat to Maximize Muscle Gain",
     excerpt:
-      "Skipping the gym and eating poorly doesn't just slow your progress — it actively damages your health. Here's what the science says.",
-    tag: "Lifestyle",
-    readTime: "6 min read",
+      "What you eat before and after the gym determines 70% of your results. Most gym-goers get this completely wrong. Here's the science-backed protocol.",
+    tag: "Gym Nutrition",
+    readTime: "5 min read",
     imgUrl:
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=350&fit=crop",
     content: [
       {
-        heading: "❌ WITHOUT Exercise + Proper Diet",
-        body: "Muscle loss begins within 2 weeks of inactivity — up to 1kg per month. Metabolic rate drops 10–15%. Insulin sensitivity worsens. Cardiovascular health declines fast. Mental health suffers — sedentary people are 44% more likely to be depressed.",
+        heading: "Pre-Workout Nutrition (60–90 Minutes Before)",
+        body: "Eat 30–40g protein + 40–60g complex carbohydrates before training. The carbs fill muscle glycogen for maximum strength output. The protein provides amino acids that reduce muscle breakdown during the session. Avoid high-fat foods — they slow digestion and reduce performance.",
       },
       {
-        heading: "✅ WITH Exercise + Proper Diet",
-        body: "Regular resistance training increases muscle mass 1–2kg every 3 months. Metabolic rate increases 7–10% per kg of muscle. Risk of Type 2 Diabetes drops by 58%. Mental health dramatically improves. Sleep quality and cognitive performance improve within 4 weeks.",
+        heading: "Post-Workout Nutrition (Within 45 Minutes)",
+        body: "Consume 35–50g fast-digesting protein immediately after training. Add 40–60g simple carbohydrates to spike insulin and drive nutrients into depleted muscles. This post-workout window is where the most muscle is built — missing it means wasted workouts.",
       },
       {
-        heading: "The Numbers Don't Lie",
-        body: "People who exercise regularly and eat well live an average of 7 years longer (WHO). Regular exercisers have 35% lower risk of heart disease, 40% lower risk of certain cancers. And food accounts for 70% of your results — the gym is only 30%.",
+        heading: "The Real Numbers: What Studies Show",
+        body: "Athletes with optimized pre/post workout nutrition gain 40% more muscle mass than those who train without nutritional timing (Journal of Strength & Conditioning Research). The gap between a good physique and a great physique is often just nutrition timing.",
+      },
+      {
+        heading: "MuscleMeal is Built for Gym Timing",
+        body: "Every MuscleMeal box is portioned to serve as either a pre-workout or post-workout meal — with the right protein and carb ratio for each purpose. Our morning delivery ensures your nutrition is ready when your gym session is done.",
       },
     ],
   },
@@ -102,13 +106,13 @@ export default function BlogSection() {
           className="text-center mb-14"
         >
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
-            Knowledge Hub
+            Bodybuilder's Knowledge Hub
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-black text-gray-900">
-            Articles &amp; Tips
+            Muscle & Training Articles
           </h2>
           <p className="text-gray-500 mt-3">
-            Nutrition science, fitness tips, and real data for real results
+            Science-backed nutrition for serious gym-goers and bodybuilders
           </p>
         </motion.div>
 

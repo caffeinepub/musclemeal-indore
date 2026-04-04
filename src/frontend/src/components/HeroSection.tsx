@@ -6,9 +6,9 @@ const WA_LINK =
   "https://wa.me/917724047283?text=Hi%20MuscleMeal%2C%20I%20want%20to%20order%20a%20meal%20plan!";
 const ROTATING_TEXTS = [
   "For Muscle Building",
-  "For Fat Loss Goals",
+  "For Bodybuilders",
   "For Gym Athletes",
-  "For Peak Performance",
+  "For Mass Gain",
 ];
 const SOCIAL_PROOF = ["💪", "🏋️", "🔥"];
 
@@ -41,11 +41,11 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6"
           >
-            Designed for Gym-Goers &amp; Athletes
+            High Protein Meals for Gym-Goers &amp; Bodybuilders
           </motion.span>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight mb-2">
-            Fresh Meals
+            Fuel Your Gains
           </h1>
 
           {/* Rotating text */}
@@ -69,9 +69,16 @@ export default function HeroSection() {
           </div>
 
           <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-md">
-            Macro-tracked, high-protein meals delivered every morning — built
-            for gym-goers who want{" "}
-            <span className="text-gray-900 font-semibold">real results</span>.
+            Fresh, macro-tracked,{" "}
+            <span className="text-gray-900 font-semibold">
+              30g+ protein meals
+            </span>{" "}
+            delivered every morning — engineered for gym-goers who are serious
+            about{" "}
+            <span className="text-gray-900 font-semibold">
+              building muscle and strength
+            </span>
+            .
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -109,13 +116,13 @@ export default function HeroSection() {
               ))}
             </div>
             <p className="text-sm text-gray-500">
-              <span className="font-bold text-gray-900">500+</span> gym-goers in
-              Indore trust MuscleMeal
+              <span className="font-bold text-gray-900">500+</span> bodybuilders
+              & gym-goers in Indore trust MuscleMeal
             </p>
           </div>
         </motion.div>
 
-        {/* RIGHT: bright food image */}
+        {/* RIGHT: gym / bodybuilder image */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -124,8 +131,8 @@ export default function HeroSection() {
         >
           <div className="rounded-3xl overflow-hidden h-72 md:h-[520px] shadow-lifted">
             <img
-              src="/assets/generated/hero-bg.dim_1400x800.jpg"
-              alt="Fresh high-protein meal bowls for gym-goers"
+              src="/assets/generated/hero-gym-bodybuilder.dim_1400x800.jpg"
+              alt="Bodybuilder gym workout - muscle gain meal fuel"
               className="w-full h-full object-cover"
             />
           </div>

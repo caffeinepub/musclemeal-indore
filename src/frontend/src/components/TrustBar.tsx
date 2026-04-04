@@ -1,13 +1,13 @@
 const ITEMS = [
-  "30g+ Protein Per Meal",
+  "30-45g Protein Per Meal",
+  "Made for Bodybuilders",
+  "Macro-Tracked for Muscle Gain",
+  "Bulking & Cutting Plans",
   "Fresh Daily Preparation",
-  "Macro-Tracked",
-  "Built for Gym-Goers",
   "Indore Delivery",
-  "No Hidden Calories",
   "High-Protein Indian Meals",
-  "100% Fresh Ingredients",
-  "Cutting & Bulking Plans",
+  "Serious Gym-Goers Only",
+  "No Hidden Calories",
   "WhatsApp Support 24/7",
 ];
 

@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 
 const PROBLEMS = [
-  "You train hard at the gym but your diet isn't on track",
-  "Outside food kills your progress with hidden calories and bad macros",
-  "You don't have time to meal prep after a long workout",
-  "You're not hitting your daily protein and macro targets",
-  "You're putting in the reps but not seeing the results you deserve",
+  "You train heavy but your protein intake is nowhere near enough for muscle growth",
+  "Outside food has random macros — impossible to hit your daily protein target",
+  "You don't have time to cook 4-5 high-protein meals per day after gym",
+  "You're not in a proper caloric surplus for bulking — or deficit for lean muscle",
+  "You're putting in the reps every day but the muscle just isn't growing fast enough",
 ];
 
 export default function ProblemSection() {
@@ -23,7 +23,7 @@ export default function ProblemSection() {
             Sound Familiar?
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-            Every Gym-Goer
+            Every Bodybuilder
             <br />
             Knows This Struggle
           </h2>
@@ -54,7 +54,8 @@ export default function ProblemSection() {
         >
           <span className="text-2xl shrink-0">✅</span>
           <span className="font-black text-lg text-white">
-            MuscleMeal solves all of this — meal by meal
+            MuscleMeal delivers the exact protein and macros to build muscle —
+            every single day
           </span>
         </motion.div>
       </div>

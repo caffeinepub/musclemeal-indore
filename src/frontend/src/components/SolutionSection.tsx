@@ -4,23 +4,23 @@ const GOALS = [
   {
     icon: "🍽️",
     title: "What Is MuscleMeal?",
-    desc: "Every morning we prepare fresh, calorie-counted, high-protein meals and deliver them straight to your door — engineered for your specific training goal, not just general eating.",
-    image: "/assets/generated/whats-musclemeal.dim_800x500.jpg",
+    desc: "Every morning we prepare fresh, calorie-counted, high-protein meals and deliver them straight to your door — engineered for gym-goers and bodybuilders who want real muscle gain.",
+    image: "/assets/generated/gym-meal-prep-indian.dim_800x500.jpg",
     tag: "Indore's #1 Gym Nutrition Service",
   },
   {
-    icon: "🔥",
-    title: "For Weight Loss",
-    desc: "Calorie deficit meals with the right macros — filling, delicious, and scientifically portioned to help you shed fat without starving.",
-    image: "/assets/generated/fat-loss-meal.dim_800x500.jpg",
-    tag: "Cutting Plan",
+    icon: "🏋️",
+    title: "For Mass Gain & Bulking",
+    desc: "High-calorie, high-protein meals with 30–45g protein per serving — designed to fuel serious muscle growth, maximize recovery after heavy lifts, and support consistent strength gains.",
+    image: "/assets/generated/muscle-gain-high-protein.dim_800x500.jpg",
+    tag: "Bulking Plan",
   },
   {
     icon: "💪",
-    title: "For Mass Gain",
-    desc: "High-protein meals with 30g+ protein in every single meal — designed to fuel muscle growth and speed up recovery after intense workouts.",
-    image: "/assets/generated/muscle-gain-meal.dim_800x500.jpg",
-    tag: "Bulking Plan",
+    title: "For Bodybuilders & Athletes",
+    desc: "Precision macro-tracked meals for competitive bodybuilders and dedicated athletes — the right protein, carbs, and calories at the right time to build the physique you're training for.",
+    image: "/assets/generated/bodybuilder-eating-meal.dim_800x500.jpg",
+    tag: "Elite Athlete Plan",
   },
 ];
 
@@ -39,11 +39,11 @@ export default function SolutionSection() {
             The Solution
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-black text-gray-900">
-            Built for Your Training Goal
+            Built for Serious Gym-Goers
           </h2>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-            Whether you're cutting fat or bulking up — MuscleMeal has your
-            nutrition covered.
+            Whether you're bulking hard or building lean muscle — MuscleMeal
+            delivers the exact protein and macros your body needs.
           </p>
         </motion.div>
 

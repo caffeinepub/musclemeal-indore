@@ -15,7 +15,7 @@ type RecipeItem = {
 };
 
 const RECIPES: Record<string, RecipeItem[]> = {
-  "Muscle Non-Veg": [
+  "Bulking Non-Veg": [
     {
       name: "Tandoori Chicken (200g)",
       img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop",
@@ -23,7 +23,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 4,
       fat: 6,
       calories: 238,
-      description: "Classic tandoori chicken, post-workout protein powerhouse",
+      description:
+        "Classic tandoori chicken — post-workout protein powerhouse for serious mass gain",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -34,7 +35,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 3,
       fat: 5,
       calories: 185,
-      description: "Marinated chicken grilled on skewers with Indian spices",
+      description:
+        "Marinated chicken grilled on skewers — lean protein to fuel muscle synthesis",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -45,7 +47,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 18,
       fat: 10,
       calories: 302,
-      description: "Minced chicken with green peas in aromatic masala",
+      description:
+        "Minced chicken with green peas — quality protein and carbs for muscle recovery",
       cuisine: "Indian",
       tags: [],
     },
@@ -56,7 +59,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 5,
       fat: 8,
       calories: 244,
-      description: "Bold black pepper chicken with minimal oil",
+      description:
+        "Bold black pepper chicken — high protein with minimal carbs for clean bulk",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -67,7 +71,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 12,
       fat: 5,
       calories: 213,
-      description: "Light chicken stew loaded with vegetables",
+      description:
+        "Light chicken stew loaded with vegetables — supports muscle recovery and growth",
       cuisine: "Indian",
       tags: [],
     },
@@ -78,7 +83,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 4,
       fat: 12,
       calories: 210,
-      description: "Three egg masala omelette, quick post-workout meal",
+      description:
+        "Three egg masala omelette — complete amino acids for muscle protein synthesis",
       cuisine: "Indian",
       tags: [],
     },
@@ -89,7 +95,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 28,
       fat: 10,
       calories: 280,
-      description: "Scrambled spiced eggs with wholesome multigrain roti",
+      description:
+        "Scrambled spiced eggs with multigrain roti — balanced macros for sustained bulk",
       cuisine: "Indian",
       tags: [],
     },
@@ -100,7 +107,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 8,
       fat: 10,
       calories: 226,
-      description: "Protein-packed boiled egg salad with fresh greens",
+      description:
+        "Protein-packed boiled egg salad — bodybuilder's classic for hitting daily protein targets",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -111,7 +119,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 6,
       fat: 14,
       calories: 266,
-      description: "Kashmiri style mutton in aromatic red gravy",
+      description:
+        "Kashmiri style mutton — rich in protein and creatine for serious strength gains",
       cuisine: "Indian",
       tags: [],
     },
@@ -122,7 +131,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 3,
       fat: 10,
       calories: 238,
-      description: "Dry-roasted lean mutton with intense spice flavor",
+      description:
+        "Dry-roasted lean mutton — high protein, intense flavor, perfect for bulking",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -133,9 +143,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 0,
       fat: 6,
       calories: 198,
-      description: "Clean grilled fish with zero carbs, high protein",
+      description:
+        "Clean grilled fish — zero carbs, high protein, ideal for lean muscle building",
       cuisine: "Indian",
-      tags: ["High Protein", "Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Prawn Masala",
@@ -144,9 +155,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 6,
       fat: 4,
       calories: 180,
-      description: "Spiced prawns in tangy masala, low fat high protein",
+      description:
+        "Spiced prawns in tangy masala — low fat, high protein for muscle definition",
       cuisine: "Indian",
-      tags: ["High Protein", "Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Grilled Chicken + Quinoa Bowl",
@@ -155,7 +167,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 32,
       fat: 8,
       calories: 380,
-      description: "American-style protein bowl for serious muscle gain",
+      description:
+        "American-style protein bowl — complete macros engineered for serious muscle gain",
       cuisine: "International",
       tags: ["High Protein"],
     },
@@ -166,7 +179,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 28,
       fat: 10,
       calories: 354,
-      description: "Middle Eastern wrap for muscle fuel and taste",
+      description:
+        "Middle Eastern wrap — high protein carb combo perfect for post-workout muscle fuel",
       cuisine: "International",
       tags: [],
     },
@@ -177,7 +191,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 36,
       fat: 7,
       calories: 367,
-      description: "Japanese-inspired lean chicken with nutty brown rice",
+      description:
+        "Japanese-inspired lean chicken with brown rice — optimal muscle glycogen replenishment",
       cuisine: "International",
       tags: ["High Protein"],
     },
@@ -188,12 +203,13 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 4,
       fat: 9,
       calories: 241,
-      description: "Grilled Turkish-spiced chicken skewers, very lean",
+      description:
+        "Grilled Turkish-spiced chicken — very lean, ideal for clean bulking phase",
       cuisine: "International",
       tags: ["High Protein"],
     },
   ],
-  "Muscle Veg": [
+  "Bulking Veg": [
     {
       name: "Paneer Tikka (200g)",
       img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
@@ -201,7 +217,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 6,
       fat: 16,
       calories: 280,
-      description: "Marinated paneer grilled on skewers with veggies",
+      description:
+        "Marinated paneer grilled on skewers — calorie-dense vegetarian protein for bulking",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -212,7 +229,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 18,
       fat: 6,
       calories: 254,
-      description: "High protein soya chunks in hearty spiced curry",
+      description:
+        "High protein soya chunks — plant-based muscle builder that rivals chicken",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -223,7 +241,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 30,
       fat: 8,
       calories: 264,
-      description: "Slow-cooked black lentil curry, protein-rich comfort food",
+      description:
+        "Slow-cooked black lentil curry — protein-rich comfort food for bulking diet",
       cuisine: "Indian",
       tags: [],
     },
@@ -234,7 +253,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 48,
       fat: 8,
       calories: 344,
-      description: "Classic kidney bean rice bowl, the muscle-building staple",
+      description:
+        "Classic kidney bean rice bowl — the Indian bodybuilder's staple for caloric surplus",
       cuisine: "Indian",
       tags: [],
     },
@@ -245,7 +265,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 4,
       fat: 18,
       calories: 272,
-      description: "Scrambled spiced paneer, high fat high protein",
+      description:
+        "Scrambled spiced paneer — high fat, high protein for maximum muscle anabolism",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -256,7 +277,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 36,
       fat: 12,
       calories: 372,
-      description: "Complete amino acid profile from quinoa + paneer",
+      description:
+        "Complete amino acid profile from quinoa + paneer — perfect veg muscle meal",
       cuisine: "International",
       tags: ["High Protein"],
     },
@@ -267,7 +289,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 38,
       fat: 8,
       calories: 328,
-      description: "Japanese-style protein-rich tofu bowl with fiber",
+      description:
+        "Japanese-style protein-rich tofu bowl — fiber + protein combo for muscle building",
       cuisine: "International",
       tags: [],
     },
@@ -278,12 +301,13 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 42,
       fat: 16,
       calories: 408,
-      description: "Calorie-dense mass gain smoothie for hard gainers",
+      description:
+        "Calorie-dense mass gain smoothie — hard gainer's secret weapon for surplus calories",
       cuisine: "International",
       tags: [],
     },
   ],
-  "Fat Loss Non-Veg": [
+  "Lean Muscle Non-Veg": [
     {
       name: "Tandoori Chicken (No Butter)",
       img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop",
@@ -291,7 +315,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 4,
       fat: 4,
       calories: 220,
-      description: "High protein, ultra-low fat grilled chicken",
+      description:
+        "High protein, ultra-low fat — ideal for lean muscle gain while minimizing body fat",
       cuisine: "Indian",
       tags: ["High Protein"],
     },
@@ -302,9 +327,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 2,
       fat: 3,
       calories: 122,
-      description: "Light clear broth with chicken, perfect evening snack",
+      description:
+        "Light clear broth with chicken — low calorie protein source for lean muscle cuts",
       cuisine: "Indian",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Lemon Pepper Chicken",
@@ -313,9 +339,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 1,
       fat: 4,
       calories: 192,
-      description: "Zesty lemon pepper chicken breast, almost zero carbs",
+      description:
+        "Zesty lemon pepper chicken breast — near-zero carbs for bodybuilding cutting phase",
       cuisine: "Indian",
-      tags: ["High Protein", "Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Steamed Fish (No Oil)",
@@ -324,9 +351,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 0,
       fat: 3,
       calories: 162,
-      description: "Pure protein, zero oil steamed fish fillet",
+      description:
+        "Pure protein, zero oil steamed fish — the ultimate lean muscle cutting meal",
       cuisine: "Indian",
-      tags: ["High Protein", "Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Grilled Chicken Caesar Salad",
@@ -335,7 +363,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 8,
       fat: 10,
       calories: 274,
-      description: "Classic Caesar with grilled chicken breast strips",
+      description:
+        "Classic Caesar with grilled chicken — high protein salad for lean muscle and definition",
       cuisine: "International",
       tags: ["High Protein"],
     },
@@ -346,9 +375,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 14,
       fat: 4,
       calories: 204,
-      description: "Light aromatic broth with chicken and rice noodles",
+      description:
+        "Light aromatic broth with chicken — perfect cutting meal with controlled macros",
       cuisine: "International",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Lebanese Grilled Chicken",
@@ -357,12 +387,13 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 4,
       fat: 6,
       calories: 228,
-      description: "Lebanese spiced grilled chicken, ultra-lean protein",
+      description:
+        "Lebanese spiced grilled chicken — ultra-lean protein source for muscle definition",
       cuisine: "International",
       tags: ["High Protein"],
     },
   ],
-  "Fat Loss Veg": [
+  "Lean Muscle Veg": [
     {
       name: "Moong Dal Chilla (No Oil)",
       img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
@@ -370,9 +401,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 22,
       fat: 2,
       calories: 162,
-      description: "Light savory crepes made from green moong dal",
+      description:
+        "Light savory moong dal crepes — low calorie protein meal for lean muscle cutting",
       cuisine: "Indian",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Sprouts Salad",
@@ -381,9 +413,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 18,
       fat: 2,
       calories: 138,
-      description: "Mixed sprouts with fresh lemon and vegetables",
+      description:
+        "Mixed sprouts with fresh lemon — bioavailable protein for lean muscle preservation",
       cuisine: "Indian",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Palak Paneer (No Cream)",
@@ -392,9 +425,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 8,
       fat: 8,
       calories: 168,
-      description: "Iron-rich spinach with paneer, no cream version",
+      description:
+        "Iron-rich spinach with paneer — supports muscle oxygenation during cutting phase",
       cuisine: "Indian",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Tofu Stir Fry (Low Oil)",
@@ -403,9 +437,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 8,
       fat: 5,
       calories: 149,
-      description: "Crispy tofu with colorful vegetables, minimal oil",
+      description:
+        "Crispy tofu with colorful vegetables — high protein, low calorie for lean muscle",
       cuisine: "Indian",
-      tags: ["High Protein", "Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Mixed Veg Soup",
@@ -414,9 +449,10 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 12,
       fat: 2,
       calories: 90,
-      description: "Fiber-rich vegetable soup, perfect evening meal",
+      description:
+        "Fiber-rich vegetable soup — keeps you in deficit while supporting muscle retention",
       cuisine: "Indian",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
     {
       name: "Quinoa Veg Bowl",
@@ -425,7 +461,8 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 32,
       fat: 6,
       calories: 254,
-      description: "Complete protein quinoa with roasted vegetables",
+      description:
+        "Complete protein quinoa with roasted vegetables — lean muscle building for veg athletes",
       cuisine: "International",
       tags: ["High Protein"],
     },
@@ -436,26 +473,21 @@ const RECIPES: Record<string, RecipeItem[]> = {
       carbs: 8,
       fat: 4,
       calories: 124,
-      description: "Authentic miso soup with silken tofu, gut-friendly",
+      description:
+        "Authentic miso soup with silken tofu — gut health supports muscle nutrient absorption",
       cuisine: "International",
-      tags: ["Low Calorie"],
+      tags: ["High Protein"],
     },
   ],
 };
 
 const TABS = [
-  "Muscle Non-Veg",
-  "Muscle Veg",
-  "Fat Loss Non-Veg",
-  "Fat Loss Veg",
+  "Bulking Non-Veg",
+  "Bulking Veg",
+  "Lean Muscle Non-Veg",
+  "Lean Muscle Veg",
 ];
-const FILTERS = [
-  "All",
-  "Indian",
-  "International",
-  "High Protein",
-  "Low Calorie",
-];
+const FILTERS = ["All", "Indian", "International", "High Protein"];
 const TAB_OCIDS = [
   "recipes.tab.1",
   "recipes.tab.2",
@@ -486,13 +518,14 @@ export default function RecipesPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
-              Menu
+              Bodybuilder's Menu
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mt-2">
               Recipe Library
             </h1>
             <p className="text-gray-500 mt-3 max-w-md mx-auto text-lg">
-              Indian & International recipes crafted for your fitness goal.
+              High-protein Indian & International recipes for muscle gain and
+              bodybuilding.
             </p>
           </motion.div>
         </div>
