@@ -13,45 +13,45 @@ const PRICES: Record<string, Record<string, number>> = {
 const PLAN_CARDS = [
   {
     meals: "2",
-    title: "Starter",
+    title: "Cutting Plan",
     calories: "~1800 kcal/day",
     protein: "~120g protein",
     sampleMeals: [
       "Breakfast + Lunch",
-      "Grilled Chicken / Paneer",
-      "Dal + Rice or Roti",
+      "High-protein, low-carb meals",
+      "Calorie-deficit optimized",
     ],
     image:
       "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
-    macros: { protein: 40, carbs: 40, fat: 20 },
+    emoji: "🔥",
   },
   {
     meals: "3",
-    title: "Popular",
+    title: "Bulking Plan",
     calories: "~2200 kcal/day",
     protein: "~150g protein",
     sampleMeals: [
       "Breakfast + Lunch + Dinner",
-      "Tandoori Chicken / Soya Curry",
-      "Quinoa Bowl + Salad",
+      "High-calorie, high-protein meals",
+      "Post-workout recovery meal",
     ],
     image:
       "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop",
-    macros: { protein: 45, carbs: 35, fat: 20 },
+    emoji: "💪",
   },
   {
     meals: "4",
-    title: "Elite",
+    title: "Elite Athlete",
     calories: "~2800 kcal/day",
     protein: "~180g protein",
     sampleMeals: [
       "4 Full Meals + Snack",
-      "Post-workout shake meal",
-      "Custom menu weekly",
+      "Pre & post-workout nutrition",
+      "Custom macro plan weekly",
     ],
     image:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop",
-    macros: { protein: 50, carbs: 30, fat: 20 },
+    emoji: "🏆",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="plans" className="py-24 bg-background">
+    <section id="plans" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,68 +83,66 @@ export default function PricingSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
             Pricing
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-gray-900">
             Choose Your Plan
           </h2>
-          <p className="text-muted-foreground mt-3 max-w-md mx-auto">
-            Veg / Non-Veg, Weekly / Monthly &mdash; tailored to your goal
+          <p className="text-gray-500 mt-3 max-w-md mx-auto">
+            Designed for gym-goers — Veg / Non-Veg, weekly or monthly
           </p>
         </motion.div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <div
-            data-ocid="pricing.veg_nonveg.toggle"
-            className="flex items-center bg-card border border-border rounded-full p-1"
-          >
+        {/* Toggles */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex rounded-full overflow-hidden border-2 border-gray-200 p-1 bg-gray-50">
             <button
               type="button"
+              data-ocid="pricing.veg.toggle"
               onClick={() => setIsVeg(true)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+              className={`px-5 py-2 text-sm font-bold rounded-full transition-colors ${
                 isVeg
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-gray-600 hover:text-gray-800"
               }`}
             >
               🥗 Vegetarian
             </button>
             <button
               type="button"
+              data-ocid="pricing.nonveg.toggle"
               onClick={() => setIsVeg(false)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+              className={`px-5 py-2 text-sm font-bold rounded-full transition-colors ${
                 !isVeg
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-gray-600 hover:text-gray-800"
               }`}
             >
-              🍗 Non-Vegetarian
+              🍗 Non-Veg
             </button>
           </div>
-
-          <div
-            data-ocid="pricing.weekly_monthly.toggle"
-            className="flex items-center bg-card border border-border rounded-full p-1"
-          >
+          <div className="flex rounded-full overflow-hidden border-2 border-gray-200 p-1 bg-gray-50">
             <button
               type="button"
+              data-ocid="pricing.monthly.toggle"
               onClick={() => setIsMonthly(true)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+              className={`px-5 py-2 text-sm font-bold rounded-full transition-colors ${
                 isMonthly
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-gray-600 hover:text-gray-800"
               }`}
             >
               Monthly
             </button>
             <button
               type="button"
+              data-ocid="pricing.weekly.toggle"
               onClick={() => setIsMonthly(false)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+              className={`px-5 py-2 text-sm font-bold rounded-full transition-colors ${
                 !isMonthly
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-gray-600 hover:text-gray-800"
               }`}
             >
               Weekly
@@ -152,136 +150,86 @@ export default function PricingSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {PLAN_CARDS.map((plan, idx) => {
-            const isMiddle = idx === 1;
-            const price = currentPrices[plan.meals];
+        {/* Plan cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {PLAN_CARDS.map((plan, i) => {
+            const isPopular = plan.title === "Bulking Plan";
             return (
               <motion.div
                 key={plan.meals}
-                data-ocid={`pricing.plan.card.${idx + 1}`}
-                initial={{ opacity: 0, y: 24 }}
+                data-ocid={`pricing.item.${i + 1}`}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`rounded-2xl overflow-hidden border flex flex-col ${
-                  isMiddle
-                    ? "border-primary shadow-xl shadow-primary/10 scale-[1.02]"
-                    : "border-border"
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`relative rounded-2xl overflow-hidden flex flex-col bg-white card-hover transition-all duration-300 ${
+                  isPopular
+                    ? "border-2 border-primary shadow-lifted"
+                    : "border border-gray-200 shadow-card"
                 }`}
               >
-                {/* Image with macro overlay */}
-                <div className="relative h-40 overflow-hidden">
+                {isPopular && (
+                  <div className="bg-primary text-white text-xs font-black uppercase tracking-widest text-center py-2 flex items-center justify-center gap-1">
+                    <Zap size={12} />
+                    Most Popular
+                  </div>
+                )}
+                <div className="h-48 overflow-hidden relative">
                   <img
                     src={plan.image}
                     alt={plan.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-
-                  {/* Macro pills */}
-                  <div className="absolute bottom-3 left-3 right-3 flex gap-1.5">
-                    <div className="flex-1 bg-black/60 backdrop-blur-sm rounded-lg py-1.5 text-center">
-                      <div className="text-xs font-bold text-green-300">
-                        {plan.macros.protein}%
-                      </div>
-                      <div className="text-[9px] text-white/70 uppercase tracking-wide">
-                        Protein
-                      </div>
-                    </div>
-                    <div className="flex-1 bg-black/60 backdrop-blur-sm rounded-lg py-1.5 text-center">
-                      <div className="text-xs font-bold text-blue-300">
-                        {plan.macros.carbs}%
-                      </div>
-                      <div className="text-[9px] text-white/70 uppercase tracking-wide">
-                        Carbs
-                      </div>
-                    </div>
-                    <div className="flex-1 bg-black/60 backdrop-blur-sm rounded-lg py-1.5 text-center">
-                      <div className="text-xs font-bold text-orange-300">
-                        {plan.macros.fat}%
-                      </div>
-                      <div className="text-[9px] text-white/70 uppercase tracking-wide">
-                        Fat
-                      </div>
-                    </div>
+                  <div className="absolute top-3 left-3 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-xl shadow-sm">
+                    {plan.emoji}
                   </div>
-
-                  {isMiddle && (
-                    <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full flex items-center gap-1">
-                      <Zap size={10} /> Most Popular
-                    </div>
-                  )}
                 </div>
-
-                {/* Card body */}
-                <div className="bg-card p-5 flex flex-col flex-1">
-                  <div className="mb-4">
-                    <div className="flex items-baseline justify-between mb-1">
-                      <h3 className="font-display text-xl font-bold text-foreground">
-                        {plan.meals} Meals / Day
-                      </h3>
-                      <span className="text-xs text-primary font-semibold border border-primary/30 px-2 py-0.5 rounded-full">
-                        {plan.title}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-xs">
-                      {plan.calories} &middot; {plan.protein}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="mb-3">
+                    <h3 className="font-black text-xl text-gray-900">
+                      {plan.title}
+                    </h3>
+                    <p className="text-sm text-gray-400">
+                      {plan.meals} Meals / Day
                     </p>
                   </div>
-
                   <div className="mb-4">
-                    <span className="font-display text-3xl font-bold text-foreground">
-                      ₹{price.toLocaleString("en-IN")}
+                    <span className="text-3xl font-black text-gray-900">
+                      ₹{currentPrices[plan.meals].toLocaleString()}
                     </span>
-                    <span className="text-muted-foreground text-sm ml-1">
-                      / {isMonthly ? "month" : "week"}
+                    <span className="text-sm text-gray-400 ml-1">
+                      /{isMonthly ? "month" : "week"}
                     </span>
                   </div>
-
-                  <div className="space-y-1.5 mb-4">
-                    {plan.sampleMeals.map((meal) => (
-                      <div
-                        key={meal}
-                        className="flex items-start gap-2 text-sm text-foreground/80"
-                      >
-                        <Check
-                          size={13}
-                          className="text-primary mt-0.5 shrink-0"
-                        />
-                        {meal}
-                      </div>
-                    ))}
-                    {FEATURES.map((f) => (
-                      <div
-                        key={f}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                      >
-                        <Check
-                          size={13}
-                          className="text-muted-foreground/50 mt-0.5 shrink-0"
-                        />
-                        {f}
-                      </div>
-                    ))}
+                  <div className="flex gap-3 mb-4">
+                    <span className="text-xs font-bold bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                      {plan.calories}
+                    </span>
+                    <span className="text-xs font-bold bg-green-50 text-green-700 px-2.5 py-1 rounded-full">
+                      {plan.protein}
+                    </span>
                   </div>
-
-                  <div className="mt-auto pt-2">
-                    <a
-                      href={waLink(plan.meals, plan.title)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-ocid={`pricing.plan.order.button.${idx + 1}`}
-                      className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-colors ${
-                        isMiddle
-                          ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                          : "bg-secondary text-foreground hover:bg-secondary/80"
-                      }`}
-                    >
-                      <WhatsAppIcon className="w-4 h-4 fill-current" />
-                      Order on WhatsApp
-                    </a>
-                  </div>
+                  <ul className="space-y-2 mb-6 flex-1">
+                    {[...plan.sampleMeals, ...FEATURES].map((feat) => (
+                      <li
+                        key={feat}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <Check size={14} className="text-primary shrink-0" />
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={waLink(plan.meals, plan.title)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ocid={`pricing.order.button.${i + 1}`}
+                    className="flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-full text-sm font-black hover:bg-primary/90 transition-colors"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
+                    Order {plan.title}
+                  </a>
                 </div>
               </motion.div>
             );

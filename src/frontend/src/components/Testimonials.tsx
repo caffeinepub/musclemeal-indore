@@ -71,12 +71,11 @@ function StarRow({ count }: { count: number }) {
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
   const next = () => setCurrent((c) => Math.min(RESULTS.length - 1, c + 1));
 
   return (
-    <section id="testimonials" className="py-24 bg-background overflow-hidden">
+    <section id="testimonials" className="py-24 bg-hf-light overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,18 +84,17 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
             Real Transformations
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-gray-900">
             Before &amp; After Results
           </h2>
-          <p className="text-muted-foreground mt-3">
+          <p className="text-gray-500 mt-3">
             Real results from our clients &mdash; photos and feedback
           </p>
         </motion.div>
 
-        {/* Horizontal carousel */}
         <div className="relative">
           <div
             ref={containerRef}
@@ -111,79 +109,56 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex-shrink-0 w-[280px] md:w-[320px] bg-card border border-border rounded-2xl overflow-hidden snap-start"
+                className="flex-shrink-0 w-[280px] md:w-[320px] bg-white border border-gray-200 rounded-xl overflow-hidden snap-start"
               >
                 {r.image ? (
-                  <div className="h-72 overflow-hidden">
+                  <div className="h-48 overflow-hidden">
                     <img
                       src={r.image}
-                      alt={`${r.name} transformation`}
+                      alt={r.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 ) : (
-                  <div className="h-28 bg-gradient-to-br from-primary/20 to-muted flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary/30 flex items-center justify-center">
-                      <span className="font-display text-2xl font-bold text-primary">
-                        {r.name[0]}
-                      </span>
-                    </div>
+                  <div className="h-16 bg-primary/10 flex items-center justify-center">
+                    <span className="text-3xl">⭐</span>
                   </div>
                 )}
                 <div className="p-5">
                   <StarRow count={r.rating} />
-                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed mb-4">
+                  <p className="text-gray-700 text-sm mt-3 mb-4 leading-relaxed italic">
                     &ldquo;{r.quote}&rdquo;
                   </p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold text-sm text-foreground">
-                        {r.name}
-                      </p>
+                  <div>
+                    <div className="font-bold text-gray-900 text-sm">
+                      {r.name}
                     </div>
-                    <span className="text-xs font-bold bg-primary/15 text-primary px-3 py-1 rounded-full border border-primary/25">
+                    <div className="text-xs text-primary font-bold mt-0.5">
                       {r.result}
-                    </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-
-          {/* Navigation buttons */}
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-3 mt-6">
             <button
               type="button"
               onClick={prev}
               disabled={current === 0}
               data-ocid="testimonials.pagination_prev"
-              className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 disabled:opacity-30 transition-all"
+              className="w-9 h-9 rounded-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary transition-colors disabled:opacity-30"
             >
-              <ChevronLeft size={18} />
+              <ChevronLeft size={16} />
             </button>
-            <div className="flex gap-1.5">
-              {RESULTS.map((_, i) => (
-                <button
-                  key={i.toString()}
-                  type="button"
-                  onClick={() => setCurrent(i)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    i === current
-                      ? "bg-primary w-5"
-                      : "bg-border hover:bg-muted-foreground"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
-            </div>
             <button
               type="button"
               onClick={next}
               disabled={current === RESULTS.length - 1}
               data-ocid="testimonials.pagination_next"
-              className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 disabled:opacity-30 transition-all"
+              className="w-9 h-9 rounded-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary transition-colors disabled:opacity-30"
             >
-              <ChevronRight size={18} />
+              <ChevronRight size={16} />
             </button>
           </div>
         </div>

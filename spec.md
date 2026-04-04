@@ -1,48 +1,42 @@
-# Muscle Meals Indore — Diet Calculator Page
+# Muscle Meals Indore
 
 ## Current State
-- App has Home and Recipes pages (two-page routing via useState in App.tsx)
-- Existing DietCalculator.tsx component exists but uses backend API calls and only has 4 steps (goal, stats, activity, diet type)
-- No standalone Diet Calculator page in the navbar
+- Full-screen dark overlay hero (gym/dark feel, not HelloFresh)
+- Static trust bar with 4 numbers in a green band
+- Serious, corporate font (Inter)
+- Dark overlays, heavy black sections — not bright/playful
+- Design feels like a generic gym landing page, not like HelloFresh
 
 ## Requested Changes (Diff)
 
 ### Add
-- New page type `calculator` in App.tsx
-- Dedicated Diet Calculator page (DietCalculatorPage component) — fully frontend/client-side, no backend calls
-- "Diet Calculator" link in Navbar (both desktop and mobile)
-- 5-step wizard with progress indicator:
-  - Step 1: Basic Info (Name, Age, Gender, Weight kg, Height cm or feet/inches toggle)
-  - Step 2: Activity Level (5 options with descriptions)
-  - Step 3: Goal (4 options: Fat Loss, Muscle Gain, Maintain, Body Recomposition)
-  - Step 4: Diet Preference (Vegetarian, Non-Vegetarian, Eggetarian)
-  - Step 5: Health Conditions (multi-select: None, Diabetes, High BP, Thyroid, PCOD/PCOS, Digestive Issues, Food Allergies with text input)
-- Results section showing:
-  - Daily Calorie Need
-  - Daily Protein Need
-  - Daily Carbs Need
-  - BMI with category label
-  - BMR (Basal Metabolic Rate)
-  - Recommended Plan (based on goal + diet + activity)
-  - Expected Result (timeframe estimate)
-  - WhatsApp CTA button with pre-filled message including name, goal, weight, height, activity level
-  - Disclaimer: "This calculator provides an estimate. For an accurate plan, our dietician will personally speak with you and create a custom plan."
+- Scrolling marquee/ticker trust strip (replacing static trust bar)
+- Figtree font (playful, rounded — available locally at /assets/fonts/Figtree.woff2)
+- Cream/warm background sections (#FFF9F2 or similar) alternating with white
 
 ### Modify
-- App.tsx: add `calculator` to Page type, render DietCalculatorPage
-- Navbar.tsx: add Diet Calculator nav link alongside Recipes
+- **Hero**: Remove fullscreen dark overlay. Use HelloFresh split-layout: left 55% white/cream with bold headline + CTA, right 45% bright food image. No dark overlay. Bright, inviting.
+- **Color tokens**: Keep green primary but make it slightly brighter/more vivid. Warm cream accent background.
+- **Font**: Switch from Inter to Figtree throughout — more rounded and friendly
+- **Navbar**: Keep white, but use Figtree bold for brand name
+- **All section headings**: More natural casing (not ALL CAPS), warmer tone
+- **TrustBar**: Replace with auto-scrolling marquee (CSS animation) showing rotating trust items in bright green strip
+- **Plan cards**: Larger food photo area, more rounded corners (rounded-2xl), pill-style "Order" buttons
+- **Buttons**: Rounded-full pill style like HelloFresh
+- **Backgrounds**: Use warm cream (#FFF8F2) for alternating sections instead of grey
+- **How It Works**: Colorful illustrated step circles, warmer background
 
 ### Remove
-- Old DietCalculator.tsx backend-based component (replace with new client-side version)
+- Full-screen dark overlay from hero
+- ALL-CAPS headings everywhere (keep a few for accent labels only)
+- Heavy black/dark sections
 
 ## Implementation Plan
-1. Create new DietCalculatorPage.tsx with 5-step wizard and client-side BMR/TDEE/macro calculations
-2. Update App.tsx to add calculator page routing
-3. Update Navbar.tsx to add Diet Calculator link
-4. Calculations:
-   - BMR: Mifflin-St Jeor formula
-   - TDEE: BMR × activity multiplier
-   - Calories: TDEE adjusted for goal (−500 for fat loss, +300 for muscle gain, same for maintain, slight −200 for recomposition)
-   - Protein: 1.6–2.2g per kg depending on goal
-   - Carbs: remaining calories after protein and fat (fat = 25% of calories)
-   - BMI: weight / (height in meters)²
+1. Update index.css: Add Figtree @font-face, update body font, warm background colors
+2. Update HeroSection: Split layout (text left, image right), no dark overlay, pill CTA buttons
+3. Update TrustBar: Scrolling marquee strip
+4. Update Navbar: Figtree font
+5. Update all section headings: Title case, warmer tone
+6. Update buttons throughout to rounded-full pill style
+7. Update plan cards: larger image, more rounded
+8. Warmer background colors throughout (cream sections)

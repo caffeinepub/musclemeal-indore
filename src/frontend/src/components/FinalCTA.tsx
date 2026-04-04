@@ -3,36 +3,27 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export default function FinalCTA() {
   return (
-    <section id="cta" className="py-28 relative overflow-hidden">
-      {/* BG image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1400&h=600&fit=crop')",
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
-
-      <div className="relative z-10 container mx-auto px-4 text-center max-w-2xl">
+    <section id="cta" className="py-24 bg-primary">
+      <div className="container mx-auto px-4 text-center max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-6">
-            Start Today
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-white/70 bg-white/10 px-4 py-1.5 rounded-full mb-6">
+            Start Your Transformation
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-tight mb-5">
-            Begin Today &mdash;
+          <h2 className="font-display text-4xl md:text-6xl font-black text-white leading-tight mb-5">
+            Train Hard.
             <br />
-            <em className="text-primary">First 7 Days Free</em>
+            Eat Right.
           </h2>
-          <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-            No advance payment, no commitment &mdash;
+          <p className="text-white/80 text-lg mb-10 leading-relaxed">
+            Macro-tracked meals delivered daily — built specifically for
+            gym-goers in Indore.
             <br />
-            just WhatsApp us and watch the results happen
+            Just WhatsApp us and start seeing results.
           </p>
           <motion.a
             href="https://wa.me/917724047283"
@@ -41,9 +32,9 @@ export default function FinalCTA() {
             data-ocid="cta.primary_button"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-3 bg-white text-primary px-10 py-4 rounded-full text-base font-black shadow-lg hover:bg-white/90 transition-colors"
           >
-            <WhatsAppIcon className="w-5 h-5 fill-current" />
+            <WhatsAppIcon className="w-5 h-5 fill-primary" />
             WhatsApp Us &mdash; 7724047283
           </motion.a>
         </motion.div>

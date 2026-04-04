@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Page } from "../App";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -18,15 +18,7 @@ const homeNavLinks = [
 ];
 
 export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
-
   const toggle = () => setMobileOpen((p) => !p);
 
   const goHome = () => {
@@ -34,13 +26,11 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     setMobileOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   const goRecipes = () => {
     setCurrentPage("recipes");
     setMobileOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   const goCalculator = () => {
     setCurrentPage("calculator");
     setMobileOpen(false);
@@ -48,38 +38,37 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Logo + Brand */}
         <button
           type="button"
           onClick={goHome}
-          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
           data-ocid="nav.home.link"
         >
           <img
             src="/assets/uploads/076f7670-1bb2-11f1-b556-0d2041fa1b6f-1.png"
             alt="Muscle Meals Indore"
-            className="h-10 w-auto object-contain"
+            className="h-9 w-auto object-contain"
           />
-          <span className="font-display text-lg font-bold text-gray-900 hidden sm:inline">
+          <span
+            className="font-display text-base font-black text-gray-900 hidden sm:inline"
+            style={{ fontFamily: "Figtree, sans-serif" }}
+          >
             Muscle Meals Indore
           </span>
         </button>
 
-        <ul className="hidden md:flex items-center gap-7">
+        {/* Desktop nav links */}
+        <ul className="hidden md:flex items-center gap-6">
           {currentPage === "home" ? (
             homeNavLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   data-ocid={link.ocid}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                  className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -91,9 +80,9 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                 type="button"
                 onClick={goHome}
                 data-ocid="nav.back.link"
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 flex items-center gap-1"
+                className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-1"
               >
-                ← Back to Home
+                ← Home
               </button>
             </li>
           )}
@@ -102,10 +91,10 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               type="button"
               onClick={goRecipes}
               data-ocid="nav.recipes.link"
-              className={`text-sm font-medium transition-colors duration-200 ${
+              className={`text-sm font-semibold transition-colors duration-200 ${
                 currentPage === "recipes"
-                  ? "text-primary font-semibold"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "text-primary"
+                  : "text-gray-600 hover:text-primary"
               }`}
             >
               Recipes
@@ -116,10 +105,10 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               type="button"
               onClick={goCalculator}
               data-ocid="nav.calculator.link"
-              className={`text-sm font-medium transition-colors duration-200 ${
+              className={`text-sm font-semibold transition-colors duration-200 ${
                 currentPage === "calculator"
-                  ? "text-primary font-semibold"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "text-primary"
+                  : "text-gray-600 hover:text-primary"
               }`}
             >
               Diet Calculator
@@ -127,20 +116,22 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
           </li>
         </ul>
 
+        {/* Desktop CTA — pill button */}
         <a
-          href="https://wa.me/917724047283?text=Hi%20Muscle%20Meals%20Indore%2C%20I%20want%20a%20Free%20Trial!"
+          href="https://wa.me/917724047283?text=Hi%20Muscle%20Meals%20Indore%2C%20I%20want%20to%20order%20a%20meal%20plan!"
           target="_blank"
           rel="noopener noreferrer"
           data-ocid="nav.order.button"
-          className="hidden md:inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
+          className="hidden md:inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm"
         >
           <WhatsAppIcon className="w-4 h-4 fill-current" />
           Order Now
         </a>
 
+        {/* Mobile hamburger */}
         <button
           type="button"
-          className="md:hidden text-gray-900 p-2"
+          className="md:hidden text-gray-800 p-2"
           onClick={toggle}
           aria-label="Toggle menu"
         >
@@ -148,22 +139,23 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
         </button>
       </nav>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-white border-b border-gray-100 px-4 pb-4 shadow-sm"
+            exit={{ opacity: 0, y: -8 }}
+            className="md:hidden bg-white border-t border-gray-100 px-6 pb-6 pt-4 shadow-md"
           >
-            <ul className="flex flex-col gap-4 pt-2">
+            <ul className="flex flex-col gap-4">
               {currentPage === "home" ? (
                 homeNavLinks.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
                       data-ocid={link.ocid}
-                      className="text-sm font-medium text-gray-800 hover:text-primary transition-colors"
+                      className="text-base font-semibold text-gray-700 hover:text-primary transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}
@@ -176,9 +168,9 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                     type="button"
                     onClick={goHome}
                     data-ocid="nav.back.link"
-                    className="text-sm font-medium text-gray-800 hover:text-primary transition-colors"
+                    className="text-base font-semibold text-gray-700 hover:text-primary transition-colors"
                   >
-                    ← Back to Home
+                    ← Home
                   </button>
                 </li>
               )}
@@ -187,11 +179,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                   type="button"
                   onClick={goRecipes}
                   data-ocid="nav.recipes.link"
-                  className={`text-sm font-medium transition-colors ${
-                    currentPage === "recipes"
-                      ? "text-primary font-semibold"
-                      : "text-gray-800 hover:text-primary"
-                  }`}
+                  className="text-base font-semibold text-gray-700 hover:text-primary transition-colors"
                 >
                   Recipes
                 </button>
@@ -201,24 +189,20 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                   type="button"
                   onClick={goCalculator}
                   data-ocid="nav.calculator.link"
-                  className={`text-sm font-medium transition-colors ${
-                    currentPage === "calculator"
-                      ? "text-primary font-semibold"
-                      : "text-gray-800 hover:text-primary"
-                  }`}
+                  className="text-base font-semibold text-gray-700 hover:text-primary transition-colors"
                 >
                   Diet Calculator
                 </button>
               </li>
             </ul>
             <a
-              href="https://wa.me/917724047283?text=Hi%20Muscle%20Meals%20Indore%2C%20I%20want%20a%20Free%20Trial!"
+              href="https://wa.me/917724047283?text=Hi%20Muscle%20Meals%20Indore%2C%20I%20want%20to%20order%20a%20meal%20plan!"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex items-center justify-center gap-2 bg-primary text-white px-4 py-2.5 rounded-full text-sm font-semibold"
+              className="mt-5 flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm font-bold hover:bg-primary/90 transition-colors"
             >
               <WhatsAppIcon className="w-4 h-4 fill-current" />
-              Start Free Trial
+              Order Now on WhatsApp
             </a>
           </motion.div>
         )}

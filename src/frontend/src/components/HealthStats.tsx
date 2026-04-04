@@ -1,130 +1,192 @@
 import { motion } from "motion/react";
 
+const HERO_STATS = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop",
+    number: "80%",
+    heading: "Of chronic diseases are diet-related",
+    sub: "Poor diet is the #1 cause of preventable illness worldwide — WHO",
+    reverse: false,
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop",
+    number: "3×",
+    heading: "Higher diabetes risk from outside food",
+    sub: "Regular consumption of processed and outside food increases diabetes risk 3x — Lancet",
+    reverse: true,
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    number: "25%",
+    heading: "Longer life expectancy with balanced diet",
+    sub: "People who eat clean meals regularly live 8-11 years longer — Nature Medicine",
+    reverse: false,
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&h=600&fit=crop",
+    number: "70%",
+    heading: "Of your fitness results come from what you eat",
+    sub: "Exercise accounts for only 30% of body composition change — nutrition is the game-changer for every gym-goer.",
+    reverse: true,
+  },
+];
+
 const HEALTHY_STATS = [
   {
     value: "80%",
     label: "of chronic diseases are diet-related",
     source: "WHO",
-    color: "text-red-600",
-    bg: "bg-red-50 border-red-200",
+    color: "text-red-500",
+    bg: "bg-red-50 border-red-100",
   },
   {
     value: "30%",
     label: "lower risk of heart disease with a clean diet",
     source: "Harvard Health",
-    color: "text-green-600",
-    bg: "bg-green-50 border-green-200",
+    color: "text-primary",
+    bg: "bg-primary/5 border-primary/20",
   },
   {
     value: "11 yrs",
     label: "shorter lifespan linked to poor diet habits",
     source: "BMJ Study",
-    color: "text-red-600",
-    bg: "bg-red-50 border-red-200",
+    color: "text-red-500",
+    bg: "bg-red-50 border-red-100",
   },
   {
     value: "56%",
     label: "of regular junk food eaters develop obesity",
     source: "ICMR India",
-    color: "text-red-600",
-    bg: "bg-red-50 border-red-200",
+    color: "text-red-500",
+    bg: "bg-red-50 border-red-100",
   },
   {
     value: "25%",
     label: "longer life expectancy with a balanced diet",
     source: "Nature Medicine",
-    color: "text-green-600",
-    bg: "bg-green-50 border-green-200",
+    color: "text-primary",
+    bg: "bg-primary/5 border-primary/20",
   },
   {
     value: "3×",
     label: "higher diabetes risk from outside / processed food",
     source: "Lancet",
-    color: "text-red-600",
-    bg: "bg-red-50 border-red-200",
+    color: "text-red-500",
+    bg: "bg-red-50 border-red-100",
   },
 ];
 
-const JUNK_FOOD_FACTS = [
+const OUTSIDE_FOOD_EFFECTS = [
   {
-    icon: "🫀",
-    title: "Heart Disease",
-    stat: "43%",
-    desc: "of deaths in India are linked to cardiovascular disease caused by unhealthy diet and trans fats found in street food and fried snacks.",
-  },
-  {
-    icon: "🧠",
-    title: "Mental Health Impact",
-    stat: "2× Risk",
-    desc: "People who eat junk food 4+ times a week are 2x more likely to suffer from depression and anxiety compared to those eating whole, nutritious meals.",
+    icon: "❤️",
+    title: "Heart Disease Risk",
+    desc: "Outside food is high in trans fats and sodium — major risk factors for cardiovascular disease.",
   },
   {
     icon: "⚖️",
-    title: "Rapid Weight Gain",
-    stat: "500+ kcal",
-    desc: "A single outside meal (biryani, burger, or thali) can contain 800–1,200 calories with hidden oil and sodium — easily 500+ calories more than a balanced fitness meal.",
+    title: "Uncontrolled Weight Gain",
+    desc: "Restaurant meals average 2x the calories of home-cooked meals with unknown macro composition.",
   },
   {
-    icon: "🦷",
-    title: "Gut & Digestive Issues",
-    stat: "67%",
-    desc: "67% of regular outside food consumers report acidity, bloating, and poor digestion within 6 months — due to lack of fiber and excess preservatives.",
+    icon: "🧠",
+    title: "Mental Fog & Energy Crashes",
+    desc: "Processed food causes blood sugar spikes and crashes, reducing focus and gym performance.",
+  },
+  {
+    icon: "🦠",
+    title: "Gut Health Damage",
+    desc: "Preservatives and additives in outside food destroy beneficial gut bacteria over time.",
   },
 ];
 
 export default function HealthStats() {
   return (
-    <section id="health-stats" className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
-        {/* Section Header */}
+    <section id="health-stats" className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-16"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
-            The Real Numbers
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+            Why Food Choice Changes Everything
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
-            Why Your Food Choice{" "}
-            <em className="text-primary">Changes Everything</em>
+          <h2 className="font-display text-4xl md:text-5xl font-black text-gray-900">
+            The Real Cost of Eating Wrong
           </h2>
-          <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
-            These are not opinions — these are hard facts backed by global
-            health research. What you eat every day directly determines how long
-            you live and how well you live.
+          <p className="text-gray-500 mt-3 max-w-xl mx-auto">
+            Real-world data on what outside food does to your body — and why
+            gym-goers need precision nutrition.
           </p>
         </motion.div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+        {/* Stats grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-20">
           {HEALTHY_STATS.map((stat, i) => (
             <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={stat.value}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.07 }}
-              className={`border rounded-xl p-5 text-center ${stat.bg}`}
+              transition={{ duration: 0.4, delay: i * 0.07 }}
+              className={`border rounded-2xl p-5 ${stat.bg}`}
             >
               <div
-                className={`font-display text-3xl md:text-4xl font-bold mb-2 ${stat.color}`}
+                className={`font-display text-3xl font-black mb-1 ${stat.color}`}
               >
                 {stat.value}
               </div>
-              <p className="text-foreground/80 text-sm font-medium leading-snug mb-1">
+              <div className="text-sm font-medium text-gray-700 mb-1">
                 {stat.label}
-              </p>
-              <span className="text-xs text-muted-foreground italic">
-                — {stat.source}
-              </span>
+              </div>
+              <div className="text-xs text-gray-400">{stat.source}</div>
             </motion.div>
           ))}
         </div>
 
-        {/* Junk Food Impact */}
+        {/* Alternating image + text */}
+        <div className="space-y-16 max-w-5xl mx-auto mb-20">
+          {HERO_STATS.map((stat, i) => (
+            <motion.div
+              key={stat.number}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className={`flex flex-col ${
+                stat.reverse ? "md:flex-row-reverse" : "md:flex-row"
+              } items-center gap-10`}
+            >
+              <div className="md:w-1/2 w-full">
+                <div className="rounded-3xl overflow-hidden h-64 md:h-72 shadow-card">
+                  <img
+                    src={stat.image}
+                    alt={stat.heading}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2 w-full">
+                <div className="font-display text-6xl font-black text-primary mb-3">
+                  {stat.number}
+                </div>
+                <h3 className="font-display text-2xl font-black text-gray-900 mb-3">
+                  {stat.heading}
+                </h3>
+                <p className="text-gray-500 leading-relaxed">{stat.sub}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Outside food effects */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,61 +194,31 @@ export default function HealthStats() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-red-500 mb-3">
-            The Hidden Danger
-          </span>
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+          <h3 className="font-display text-3xl font-black text-gray-900">
             What Outside Food Does to Your Body
           </h3>
+          <p className="text-gray-500 mt-2">
+            Every cheat meal has a hidden cost — especially for gym-goers
+          </p>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {JUNK_FOOD_FACTS.map((fact, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+          {OUTSIDE_FOOD_EFFECTS.map((effect, i) => (
             <motion.div
-              key={fact.title}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={effect.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex gap-5 bg-card border border-border rounded-2xl p-6"
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="bg-cream border border-orange-100 rounded-2xl p-6 text-center"
             >
-              <div className="text-3xl shrink-0 mt-1">{fact.icon}</div>
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h4 className="font-display text-lg font-bold text-foreground">
-                    {fact.title}
-                  </h4>
-                  <span className="text-sm font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5 rounded-full">
-                    {fact.stat}
-                  </span>
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {fact.desc}
-                </p>
-              </div>
+              <div className="text-3xl mb-3">{effect.icon}</div>
+              <h4 className="font-bold text-gray-900 mb-2">{effect.title}</h4>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {effect.desc}
+              </p>
             </motion.div>
           ))}
         </div>
-
-        {/* Call to action text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-12 text-center bg-primary/5 border border-primary/20 rounded-2xl px-8 py-8"
-        >
-          <p className="text-foreground font-bold text-xl md:text-2xl leading-relaxed">
-            People who eat clean, balanced meals regularly are{" "}
-            <span className="text-primary">38% less likely to develop</span>{" "}
-            lifestyle diseases — and live an average of{" "}
-            <span className="text-primary">8–11 years longer</span> than those
-            who rely on outside food.
-          </p>
-          <p className="text-muted-foreground text-sm mt-3">
-            Source: Global Burden of Disease Study / Lancet 2023
-          </p>
-        </motion.div>
       </div>
     </section>
   );
